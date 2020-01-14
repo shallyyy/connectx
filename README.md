@@ -1,5 +1,5 @@
-# connectx
-Connect X
+# connect-five
+Connect Five
 
 ## Description
 
@@ -8,6 +8,11 @@ This repo holds the files a connect-five game based in Java. It allows a user to
 It also contains the Flask webserver written in Python that implements a basic RestAPI.
 
 Finally it holds a postgresql file that creates the appropriate tables and keys in which the RestAPI communicates with. 
+
+### Assumtpions
++ Users data such as past games and current games will be held in the database. 
++ Many pairs of users can play independently 
+
 
 ### Java
 The game is mostly within a connectx object, of which main creates and instance and runs the game upon launch. The connectx communicates data to the PostRequestHandler and GetRequestHandler, which then make Rest calls to the Flask Webserver that is being hosted locally. The Java holds very little logic and only displays and returns what the Rest API delivers. 
@@ -24,6 +29,10 @@ Games
 Moves
 
 The game board, 6x9, is made up of moves from the table Moves.  Games holds the gamestate, current turn and finally players. 
+
+### Tests
+Junit tests can be found in this directory:
+ConnectX\java\src\com\ConnectX\Tests
 
 ## Deploying
 Unfortunately the problem with creating a more scalable and extensible game is the cost of deploying the games server and database. 
@@ -56,13 +65,20 @@ This will likely have the same outcome, although perhaps with some debugging.
 
 ## Images
 Here are some of the images of the game working:
-#### Example game
+
+
+### Example game
 ![alt text](https://github.com/shallyyy/connectx/blob/master/Images/Example%20Game.png "Game.png")
-#### Open games list
+
+### Open games list
 ![alt text](https://github.com/shallyyy/connectx/blob/master/Images/Logging%20in%20and%20Open%20Games%20menu.png "OpenGames.png")
-#### Scoreboard
+
+
+### Scoreboard
 ![alt text](https://github.com/shallyyy/connectx/blob/master/Images/Scoreboard%20Menu.png "Scoreboard.png")
-#### Stats
+
+
+### Stats
 ![alt text](https://github.com/shallyyy/connectx/blob/master/Images/Statistics%20Menu.png "Stats.png")
 
 
